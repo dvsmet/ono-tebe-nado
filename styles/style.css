@@ -63,7 +63,10 @@ address a {
 /* Cover section */
 .cover {
   position: relative;
+  width: 1100px;
+  height: 757px;
   padding: 165px 50px 50px;
+  box-sizing: border-box;
   background-image: url(../images/cover.jpg);
   background-size: cover;
   background-position: center;
@@ -229,24 +232,42 @@ address a {
 
 /* About section */
 .about {
-  display: grid;
-  grid-template-columns: 430px 1fr;
-  gap: 25px;
-  padding: 0 50px 180px;
+  position: relative;
+  width: 1052px;
+  height: 595px;
+  margin-left: 24px;
+  padding: 0;
 }
 
 .about__column {
-  display: flex;
-  flex-direction: column;
+  position: relative;
+}
+
+.about__column:first-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 430px;
+  height: 100%;
+}
+
+.about__column:last-child {
+  position: absolute;
+  top: 133px;
+  left: 359px;
+  width: 693px;
+  height: 449px;
 }
 
 .about__logo {
+  position: absolute;
+  top: 35px;
+  left: 47px;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 240px;
   height: 240px;
-  margin: 0 auto;
   background-color: #000;
   border-radius: 50%;
 }
@@ -257,8 +278,8 @@ address a {
 }
 
 .about__title {
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin-top: 0;
+  margin-bottom: 0;
   font-size: 40px;
   font-weight: bold;
   text-transform: uppercase;
